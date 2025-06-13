@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+  <title>Mayuryi Passenger Auto - Reliable Booking Service</title>
+  <meta name="description"
+    content="Book your passenger auto with Mayuryi. Service areas in Tiruchirappalli, Karur, and Namakkal districts of Tamil Nadu. Service available daily from 5 AM to 10 PM without prior booking." />
+  <meta name="theme-color" content="#1a73e8" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2932e1a8-05de-4819-b44b-a50d2d30b820.png" />
+  <link rel="apple-touch-icon" href="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e9117686-28f5-48cc-9754-31c71dbf5e39.png" />
+  <meta name="author" content="Mayuryi Auto Booking Service" />
+  <meta name="keywords" content="auto booking, passenger auto, rickshaw booking, quick ride, Tamil Nadu auto service" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured data for SEO - LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mayuryi Passenger Auto Booking Service",
+    "image": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dcaf3562-a807-4f41-b2d5-d916f433bbaf.png",
+    "description": "Reliable passenger auto booking service of Mayuryi covering Tiruchirappalli, Karur, Namakkal districts with easy call and WhatsApp support.",
+    "telephone": "+911234567890",
+    "areaServed": ["Tiruchirappalli", "Karur", "Namakkal"],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "05:00",
+      "closes": "22:00"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Auto Lane",
+      "addressLocality": "Tiruchirappalli",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "620001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 10.7905,
+      "longitude": 78.7047
+    },
+    "url": "https://your-auto-booking-site.example.com",
+    "sameAs": [
+      "https://wa.me/911234567890"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Reset and base */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #ffffff;
+      color: #202124;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      -webkit-tap-highlight-color: transparent;
+      background-color: #ffffff;
+      color: #202124;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e8eaed;
+      z-index: 1500;
+      box-shadow: 0 1px 4px rgba(32, 33, 36, 0.08);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .logo img {
+      height: 40px;
+      width: 40px;
+      border-radius: 6px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #1a73e8;
+      user-select: none;
+      letter-spacing: -0.02em;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #202124;
+      text-decoration: none;
+      padding: 8px 4px;
+      border-radius: 4px;
+      transition: background-color 0.25s ease;
+    }
+
+    nav a:focus,
+    nav a:hover {
+      background-color: #e8f0fe;
+      outline: none;
+    }
+
+    /* Mobile menu toggle */
+
+    .mobile-menu-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: none;
+      padding: 8px;
+      color: #202124;
+      transition: color 0.25s ease;
+    }
+
+    .mobile-menu-button:focus {
+      outline: 2px solid #1a73e8;
+      outline-offset: 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-top: 2rem;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #1a73e8;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-weight: 400;
+      font-size: 1.125rem;
+      color: #5f6368;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.5;
+    }
+
+    .hero .hero-emblem {
+      max-width: 180px;
+      margin: 0 auto 1rem;
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgb(26 115 232 / 0.12);
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-secondary {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 12px 28px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+    }
+
+    .btn-primary {
+      background-color: #1a73e8;
+      color: #ffffff;
+      box-shadow: 0 3px 6px rgba(26, 115, 232, 0.3);
+      border: 1px solid transparent;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #155ab6;
+      box-shadow: 0 6px 12px rgba(21, 90, 182, 0.4);
+      outline: none;
+    }
+
+    .btn-secondary {
+      background-color: #e8f0fe;
+      color: #1a73e8;
+      border: 1px solid #1a73e8;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      background-color: #d2e3fc;
+      outline: none;
+    }
+
+    /* Section titles */
+    section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a73e8;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    /* Service Areas & Times container */
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      padding: 0 1rem;
+    }
+
+    .info-card {
+      background-color: #e8f0fe;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 3px 8px rgb(26 115 232 / 0.12);
+      color: #202124;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      user-select: none;
+    }
+
+    .info-card strong {
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: #1a73e8;
+    }
+
+    /* Google Maps Embed */
+    .map-container {
+      margin: 0 auto 3rem;
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgb(26 115 232 / 0.15);
+      height: 320px;
+    }
+
+    .map-container iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #e8eaed;
+      background-color: #f1f3f4;
+      padding: 24px 16px;
+      font-size: 0.875rem;
+      color: #5f6368;
+      text-align: center;
+      user-select: none;
+    }
+
+    footer a {
+      color: #1a73e8;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #155ab6;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    /* Responsive navigation menu */
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      font-size: 1rem;
+      color: #202124;
+      text-decoration: none;
+      padding: 8px 4px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background-color: #e8f0fe;
+      outline: none;
+    }
+
+    /* Mobile menu panel */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 16px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgb(26 115 232 / 0.15);
+      border-radius: 8px;
+      position: absolute;
+      top: 70px;
+      right: 16px;
+      width: 200px;
+      z-index: 1600;
+      user-select: none;
+    }
+
+    .mobile-nav a {
+      font-size: 1.125rem;
+      color: #1a73e8;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      background-color: #d2e3fc;
+      outline: none;
+    }
+
+    .mobile-nav.show {
+      display: flex;
+    }
+
+    /* Media Queries */
+    @media (max-width: 767px) {
+      nav {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .mobile-nav {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header role="banner">
+    <div class="header-inner container">
+      <a href="#top" class="logo" aria-label="Mayuryi Passenger Auto Booking Home">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b7dd163e-2321-495c-b4da-e797711da79a.png"
+          alt="Blue and green peacock emblem symbolizing trust and reliability in Mayuryi auto booking service" />
+        <span class="logo-text">Mayuryi</span>
+      </a>
+
+      <nav role="navigation" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#service-areas">Service Areas</a></li>
+          <li><a href="#service-times">Service Times</a></li>
+          <li><a href="#types-of-services">Types of Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-button" aria-label="Open main menu" aria-controls="mobile-menu" aria-expanded="false">
+        <svg height="24" width="24" fill="#202124" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M3 6h18M3 12h18M3 18h18" stroke="#202124" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile main menu" hidden>
+      <a href="#service-areas" tabindex="-1">Service Areas</a>
+      <a href="#service-times" tabindex="-1">Service Times</a>
+      <a href="#types-of-services" tabindex="-1">Types of Services</a>
+      <a href="#contact" tabindex="-1">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top" role="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <img class="hero-emblem" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ffe76b64-911b-476f-ac65-e178051a74b4.png"
+        alt="Large blue and green peacock emblem symbolizing Mayuryi auto rickshaw booking service brand logo" />
+      <h1 id="hero-title">Welcome to Mayuryi Passenger Auto Booking</h1>
+      <p>Reliable and affordable passenger auto rickshaw service. Service available daily from <strong>5:00 AM to 10:00
+          PM</strong> across selected districts. No prior booking required. Click to call or chat on WhatsApp quickly.</p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:+911234567890" role="button" class="btn-primary" aria-label="Call the auto owner at +91 12345 67890">
+          <span class="material-icons" aria-hidden="true" style="font-size:1.5rem;">call</span>
+          Call Now
+        </a>
+        <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="btn-secondary"
+          aria-label="Chat with the auto owner on WhatsApp">
+          <span class="material-icons" aria-hidden="true" style="font-size:1.5rem;">whatsapp</span>
+          WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section id="service-areas" class="container" aria-labelledby="service-areas-title">
+      <h2 id="service-areas-title">Service Areas</h2>
+      <p style="text-align:center; max-width:600px; margin: 0 auto 1rem; color:#5f6368; font-size: 1rem;">
+        We serve the districts of <strong>Tiruchirappalli, Karur, and Namakkal</strong> in Tamil Nadu, helping you get where
+        you want to go with ease and comfort.
+      </p>
+      <div class="info-cards" role="list">
+        <article role="listitem" class="info-card">
+          <strong>Tiruchirappalli</strong>
+          <p>Comprehensive auto services across the city and surrounding neighborhoods.</p>
+        </article>
+        <article role="listitem" class="info-card">
+          <strong>Karur</strong>
+          <p>Fast and reliable passenger autos covering key routes and landmarks.</p>
+        </article>
+        <article role="listitem" class="info-card">
+          <strong>Namakkal</strong>
+          <p>Quality rides ensuring safety and convenience throughout the district.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="service-times" class="container" aria-labelledby="service-times-title">
+      <h2 id="service-times-title">Service Times</h2>
+      <div class="info-cards" role="list">
+        <article role="listitem" class="info-card">
+          <strong>Monday - Sunday</strong>
+          <p>5:00 AM – 10:00 PM</p>
+        </article>
+        <article role="listitem" class="info-card">
+          <strong>Service Availability</strong>
+          <p>Available without prior booking. Just call or WhatsApp us anytime during working hours.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="types-of-services" class="container" aria-labelledby="types-of-services-title">
+      <h2 id="types-of-services-title">Types of Services</h2>
+      <div class="info-cards" role="list">
+        <article role="listitem" class="info-card">
+          <strong>Drop</strong>
+          <p>One-way journey from your pickup point to your destination.</p>
+        </article>
+        <article role="listitem" class="info-card">
+          <strong>Drop &amp; Wait</strong>
+          <p>Drop you off and wait for your quick errands before heading back.</p>
+        </article>
+        <article role="listitem" class="info-card">
+          <strong>Pickup (Round Trip)</strong>
+          <p>Pick you up and drop you back to the starting point for a seamless round trip.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="location" class="container" aria-labelledby="location-title">
+      <h2 id="location-title">Auto's Default Location</h2>
+      <div class="map-container" role="region" aria-label="Map showing Mayuryi auto's default location">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9919438818836!2d77.59291251522491!3d12.971598591291845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670b91e9833%3A0xb10eba9823941089!2sBangalore%20City%20Center!5e0!3m2!1sen!2sin!4v1686879753890!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map showing Mayuryi auto default location"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo" id="contact">
+    <div class="container">
+      <p>&copy; 2024 Mayuryi AutoBook. All rights reserved.</p>
+      <p>
+        <a href="#top">Home</a> | <a href="#service-areas">Service Areas</a> | <a href="#service-times">Service Times</a> |
+        <a href="#types-of-services">Types of Services</a> | <a href="https://wa.me/911234567890" target="_blank"
+          rel="noopener noreferrer" aria-label="WhatsApp link">WhatsApp</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Material icons loader (Google recommended stylesheet link)
+    // We load via link to keep it consistent with Google usage rather than embedding icons manually
+    (function loadMaterialIcons() {
+      if (!document.querySelector('link[href*="fonts.googleapis.com/icon"]')) {
+        const link = document.createElement('link');
+        link.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+      }
+    })();
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        mobileMenu.hidden = true;
+        mobileMenu.classList.remove('show');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        // Remove tabindex from menu links
+        mobileMenu.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+      } else {
+        mobileMenu.hidden = false;
+        mobileMenu.classList.add('show');
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        // Focus the first link
+        const firstLink = mobileMenu.querySelector('a');
+        firstLink.setAttribute('tabindex', '0');
+        firstLink.focus();
+      }
+    });
+
+    // Accessibility: close mobile menu on resize above breakpoint
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && mobileMenu.classList.contains('show')) {
+        mobileMenu.hidden = true;
+        mobileMenu.classList.remove('show');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenu.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+      }
+    });
+
+    // Service worker registration for PWA offline support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js').then(registration => {
+          // Registration successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(error => {
+          // registration failed
+          console.error('ServiceWorker registration failed:', error);
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>
+
