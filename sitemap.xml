@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://0fc0d056.mayuryi-passanger-auto-musiri-trichy-karur-namakkal.pages.dev/</loc>
+    <lastmod>2024-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Section: Service Areas -->
+  <url>
+    <loc>https://0fc0d056.mayuryi-passanger-auto-musiri-trichy-karur-namakkal.pages.dev/#service-areas</loc>
+    <lastmod>2024-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section: Service Times -->
+  <url>
+    <loc>https://0fc0d056.mayuryi-passanger-auto-musiri-trichy-karur-namakkal.pages.dev/#service-times</loc>
+    <lastmod>2024-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section: Types of Services -->
+  <url>
+    <loc>https://0fc0d056.mayuryi-passanger-auto-musiri-trichy-karur-namakkal.pages.dev/#types-of-services</loc>
+    <lastmod>2024-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section: Contact -->
+  <url>
+    <loc>https://0fc0d056.mayuryi-passanger-auto-musiri-trichy-karur-namakkal.pages.dev/#contact</loc>
+    <lastmod>2024-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
